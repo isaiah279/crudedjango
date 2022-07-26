@@ -4,7 +4,6 @@ from library.settings import DEBUG, STATIC_URL, STATIC_ROOT, MEDIA_URL, MEDIA_RO
 from django.conf.urls.static import static
 from django.views.generic.base import RedirectView
 from subscribe import views as subscribe_views
-
 urlpatterns = [
     path('', views.index, name = 'index'),
     path('upload/', views.upload, name = 'upload-book'),
