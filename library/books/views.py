@@ -3,7 +3,7 @@ from .models import Book
 from .forms import BookCreate
 from django.http import HttpResponse
 from subscribe import views
-
+from subscribe import views as subscribe_views
 # Create your views here
 def index(request):
     shelf=Book.objects.all()
@@ -21,7 +21,7 @@ def upload(request):
         return render (request,'books/upload_form.html',{'upload_form':upload})
 def update_book(request,book_id):
     #The request it self and id number. The id number is used to identify the object which is to be edited
-    id=book_id
+    #id=book_id
     book_id=int(book_id)
     
     try:
@@ -41,9 +41,11 @@ def delete_book(request,book_id):
         book_sel = Book.objects.get(id = book_id)
     #The queryset book.objects.get(id = book_id) will check for the books having an id equal to book_id.
     except Book.DoesNotExist:
-        return redirect('index/')
+        return redirect('index')
     book_sel.delete()
-    return redirect('index/')
+    return redirect('index')
+
+
 
 #UPDATE FUCTION
 #If the object exists it will return the

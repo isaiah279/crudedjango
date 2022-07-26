@@ -119,7 +119,7 @@ USE_TZ = True
 
 #for static
 STATIC_URL = '/static/'
-STATIC_ROOT=os.path.join(BASE_DIR)
+STATIC_ROOT=os.path.join(BASE_DIR,'static-files')
 #Dataflaire #user_Upload_Files
 
 MEDIA_URL='media/'
@@ -137,6 +137,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND ="django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
-EMAIL_PORT = 800
+EMAIL_PORT = 587
 EMAIL_HOST_USER = "iokech@kabarak.ac.ke"
 EMAIL_HOST_PASSWORD =" kabarak123"

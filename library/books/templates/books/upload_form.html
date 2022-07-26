@@ -4,7 +4,7 @@
     <h1 class="display-3" style="background-color:#000000;color:#FFFF99;">Upload Books</h1>
     <form method = 'POST' enctype="multipart/form-data" autocomplete="off">
         {% csrf_token %}
-        <table class = 'w-50 table table-light' style="border-radius:10px;background-color:#FFFF99;">
+        <table class = 'w-30 table table-light' style="border-radius:10px;background-color:#FFFF99;">
             {% for field in upload_form %}
             <tr>
                 <th>{{field.label}}</th>

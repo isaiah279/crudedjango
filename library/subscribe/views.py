@@ -5,6 +5,7 @@ from library.settings import EMAIL_HOST_USER
 
 from .import forms
 from django.core.mail import send_mail
+from books import views as book_views
 
 # Create your views here.
 def subscribe(request):
